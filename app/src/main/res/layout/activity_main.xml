@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    android:descendantFocusability="beforeDescendants"
+    android:background="#F2F6F2">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:focusable="true">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Khongso Hymnal"
+        android:layout_marginRight="20dp"
+        android:gravity = "center"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:id="@+id/main_toolbar_title" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.mancj.materialsearchbar.MaterialSearchBar
+        style="@style/MaterialSearchBarLight"
+        app:mt_speechMode="false"
+        app:mt_hint="search"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:id="@+id/searchBar"
+        app:mt_placeholder="Search"
+        android:layout_margin="12dp"/>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="#EDEAEA">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp">
+
+
+            <EditText
+                android:windowSoftInputMode="stateHidden"
+                android:id="@+id/main_search"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:hint="search"
+                android:paddingLeft="16dp"
+                android:background="@drawable/search_et"
+                android:singleLine="true"
+                android:inputType="text"
+                android:imeOptions="actionDone"
+                android:drawableLeft="@drawable/ic_search_black_24dp"
+                android:drawablePadding="8dp"
+                android:layout_weight="8"
+                android:focusableInTouchMode="true"
+                />
+
+
+            <ImageButton
+                android:visibility="gone"
+                android:clickable="true"
+                android:focusableInTouchMode="true"
+                android:id="@+id/search_clear_btn"
+                android:layout_width="50dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_clear_black_24dp"
+                android:layout_alignParentRight="true"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"/>
+        </LinearLayout>
+
+
+
+
+
+
+
+
+        
+
+        
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"/>
+
+</LinearLayout>

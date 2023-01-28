@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/song_layout_card_view"
+        android:elevation="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="2dp">
+
+
+
+            <TextView
+                android:id="@+id/song_layout_song_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:padding="12dp"
+                android:textColor="@color/colorBlack"
+                android:text="Song Name goes Here!"
+                android:ellipsize="end"
+                android:scrollHorizontally="true"
+                android:maxLines="1"
+                android:textStyle="bold"/>
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

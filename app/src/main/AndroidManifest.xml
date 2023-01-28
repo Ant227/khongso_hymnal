@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.deveant.broahlemkhng">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <supports-screens
+        android:smallScreens="true"
+        android:normalScreens="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/app_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+        android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+        android:value="true"/>
+        <meta-data
+            android:name="com.google.android.gms.ads.com.example.appname"
+            android:value="ca-app-pub-1199995556947305~3169573419"/>
+
+
+
+
+
+        <activity android:name="com.deveant.broahlemkhng.LyricActivity" />
+        <activity android:name="com.deveant.broahlemkhng.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
